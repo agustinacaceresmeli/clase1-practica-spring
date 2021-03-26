@@ -10,12 +10,12 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @Setter
-public class Morse {
+public class MorseCode {
 
     private StringBuilder morseCode;
     private String original;
 
-    public Morse(String code){
+    public MorseCode(String code){
         this.original = code;
     }
 

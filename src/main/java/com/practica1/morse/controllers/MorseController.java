@@ -1,6 +1,6 @@
-package com.practica1.morse.controller;
+package com.practica1.morse.controllers;
 
-import com.practica1.morse.entities.Morse;
+import com.practica1.morse.entities.MorseCode;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class MorseController {
 
     @GetMapping("/morse/{code}")
-    public Morse decodeMorse(@PathVariable(value = "code") String codeUrl) {
+    public MorseCode decodeMorse(@PathVariable(value = "code") String codeUrl) {
         try{
-            Morse morse = new Morse(codeUrl);
+            MorseCode morse = new MorseCode(codeUrl);
             morse.decodeMorse();
             return morse;
         } catch (Exception e) {
